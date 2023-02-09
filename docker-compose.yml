@@ -1,0 +1,13 @@
+version: "3"
+services:
+  code-server:
+    container_name: code-server
+    image: bencdr/code-server-deploy-container:latest
+    volumes: 
+      - "$PWD/project:/home/coder/project"
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      - "DOCKER_USER=$USER"
+      - "PASSWORD=12345"
+  
