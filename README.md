@@ -14,8 +14,27 @@ docker run -p 127.0.0.1:8080:8080 \
 ## docker-compose
 - docker-compose.yml
 
+Start:
+```
+docker compose up
+```
+
+Stop and clean-up:
+```
+docker compose down --rmi 'all' --volumes
+```
 
 ## Kubernetes
 - code-server-claim0-persistentvolumeclaim.yaml
 - code-server-deployment.yaml
 - code-server-service.yaml
+
+Start:
+```
+kubectl apply -f .
+```
+
+Stop and clean-up:
+```
+kubectl delete -f .
+```
